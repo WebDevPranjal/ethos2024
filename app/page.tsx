@@ -214,9 +214,9 @@ export default function Home() {
           </p>
           <div>{/*Add Socials */}</div>
         </div>
-        <div className="flex flex-row gap-2 md:flex-col text-neutral-400">
+        <div className="text-white flex flex-row gap-2 mt-2 md:mt-0 md:flex-col md:text-neutral-400">
           <p>Tracks</p>
-          <p>About Ethos</p>
+          <p>About</p>
           <p>Timeline</p>
           <p>Faqs</p>
         </div>
