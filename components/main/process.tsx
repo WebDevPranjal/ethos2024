@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { MultiStepLoader as Loader } from "../ui/multi-step-loader";
 import { IconSquareRoundedX } from "@tabler/icons-react";
 import { Button } from "../ui/moving-border";
+import Link from "next/link";
 
 const loadingStates = [
   {
@@ -29,14 +30,18 @@ export function RegistrationStep() {
       {/* Core Loader Modal */}
       <Loader loadingStates={loadingStates} loading={loading} duration={2000} />
 
-      {/* The buttons are for demo only, remove it in your actual code ⬇️ */}
-      <Button
-        onClick={() => setLoading(true)}
-        borderRadius="1.75rem"
-        className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800"
-      >
-        <p className="font-bold">Know More</p>
-      </Button>
+      <div className="flex gap-2">
+        <Button
+          onClick={() => setLoading(true)}
+          borderRadius="1.75rem"
+          className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800"
+        >
+          <p className="font-bold">Know More</p>
+        </Button>
+        <Button className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800">
+          <Link href={"/problems"}>Problem Statement</Link>
+        </Button>
+      </div>
 
       {loading && (
         <button
